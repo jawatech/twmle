@@ -1,4 +1,4 @@
-// Takes Stanford CoreNLP JSON output (var data = ... in data.js)
+﻿// Takes Stanford CoreNLP JSON output (var data = ... in data.js)
 // and uses brat to render everything.
 
 //var serverAddress = 'http://localhost:9000';
@@ -23,7 +23,7 @@ head.js(
   bratLocation + '/client/src/visualizer.js',
 
   // parse viewer
-  '/twmle/js/src/corenlp-parseviewer.js'
+  'js/src/corenlp-parseviewer.js'
 );
 
 // Uses Dagre (https://github.com/cpettitt/dagre) for constinuency parse
