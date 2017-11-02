@@ -23,7 +23,7 @@ head.js(
   bratLocation + '/client/src/visualizer.js',
 
   // parse viewer
-  '../js/src/corenlp-parseviewer.js'
+  './corenlp-parseviewer.js'
 );
 
 // Uses Dagre (https://github.com/cpettitt/dagre) for constinuency parse
@@ -278,7 +278,7 @@ function ConstituencyParseProcessor() {
 /**
  * Render a given JSON data structure
  */
-function render(data, reverse) {
+function renderbrat(data, reverse) {
   // Tweak arguments
   if (typeof reverse !== 'boolean') {
     reverse = false;
@@ -1048,7 +1048,7 @@ $(document).ready(function() {
           $('#annotations').show();
           // Render
           var reverse = $('#language').val() === 'ar';
-          render(data, reverse);
+          renderbrat(data, reverse);
           // Render patterns
           $('#annotations').append('<h4 class="red" style="margin-top: 4ex;">CoreNLP Tools:</h4>');  // TODO(gabor) a strange place to add this header to
           $('#patterns_row').show();
