@@ -450,15 +450,15 @@ $.getJSON( output, function( data ) {
           //                  div id      annotator     field_in_data                          label
           createAnnotationDiv('pos',      'pos',        'pos',                                 'Part-of-Speech'          );
 //          createAnnotationDiv('lemma',    'lemma',      'lemma',                               'Lemmas'                  );
-          createAnnotationDiv('ner',      'ner',        'ner',                                 'Named Entity Recognition');
-          createAnnotationDiv('parse',    'parse',      'parseTree',                           'Constituency Parse'      );
+//          createAnnotationDiv('ner',      'ner',        'ner',                                 'Named Entity Recognition');
+//          createAnnotationDiv('parse',    'parse',      'parseTree',                           'Constituency Parse'      );
           createAnnotationDiv('deps',     'depparse',   'basicDependencies',                   'Basic Dependencies'      );
           createAnnotationDiv('deps2',    'depparse',   'enhancedPlusPlusDependencies',        'Enhanced++ Dependencies' );
-          createAnnotationDiv('openie',   'openie',     'openie',                              'Open IE'                 );
-          createAnnotationDiv('coref',    'coref',      'corefs',                              'Coreference'             );
-          createAnnotationDiv('entities', 'entitylink', 'entitylink',                          'Wikidict Entities'       );
-          createAnnotationDiv('kbp',      'kbp',        'kbp',                                 'KBP Relations'           );
-          createAnnotationDiv('sentiment','sentiment',  'sentiment',                           'Sentiment'               );
+//          createAnnotationDiv('openie',   'openie',     'openie',                              'Open IE'                 );
+//          createAnnotationDiv('coref',    'coref',      'corefs',                              'Coreference'             );
+//          createAnnotationDiv('entities', 'entitylink', 'entitylink',                          'Wikidict Entities'       );
+//          createAnnotationDiv('kbp',      'kbp',        'kbp',                                 'KBP Relations'           );
+//          createAnnotationDiv('sentiment','sentiment',  'sentiment',                           'Sentiment'               );
           // Update UI
           $('#loading').hide();
           $('.corenlp_error').remove();  // Clear error messages
@@ -466,7 +466,7 @@ $.getJSON( output, function( data ) {
           // Render
           renderbrat(data.Q, false);
           // Render patterns
-          $('#annotations').append('<h4 class="red" style="margin-top: 4ex;">CoreNLP Tools:</h4>');  // TODO(gabor) a strange place to add this header to
+//          $('#annotations').append('<h4 class="red" style="margin-top: 4ex;">CoreNLP Tools:</h4>');  // TODO(gabor) a strange place to add this header to
           //$('#patterns_row').show();
 });
 //////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -488,6 +488,11 @@ $.getJSON( output, function( data ) {
     </div>
   </div>
 </div>
+    <p class="text-muted">
+      Parser adapted from Manning, Christopher D., et al. "The stanford corenlp natural language processing toolkit." 2014.
+    <p class="text-muted">
+      Visualisation provided using the <a href="http://brat.nlplab.org/">brat visualisation/annotation software</a>. 
+    </p>
 
 
           </div>
