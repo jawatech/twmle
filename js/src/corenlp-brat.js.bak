@@ -5,7 +5,7 @@
 var serverAddress = '';
 
 // Load Brat libraries
-var bratLocation = 'https://nlp.stanford.edu/js/brat/';
+var bratLocation = '/twmle/js/';
 head.js(
   // External libraries
   bratLocation + '/client/lib/jquery.svg.min.js',
@@ -23,7 +23,7 @@ head.js(
   bratLocation + '/client/src/visualizer.js',
 
   // parse viewer
-  'js/src/corenlp-parseviewer.js'
+  '/twmle/js/src/corenlp-parseviewer.js'
 );
 
 // Uses Dagre (https://github.com/cpettitt/dagre) for constinuency parse
