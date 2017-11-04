@@ -437,7 +437,7 @@
 //            oReq.addEventListener("load", reqListener);
 var loc=String(document.location).split('/');
 var output = '../data/'+loc[loc.length-2]+'.json';
-console.log(output);
+//console.log(output);
 $.getJSON( output, function( data ) {
 //          console.log(JSON.stringify(data.Q));
           // Empty divs
@@ -448,12 +448,12 @@ $.getJSON( output, function( data ) {
           }
           // (create the divs)
           //                  div id      annotator     field_in_data                          label
-          createAnnotationDiv('pos',      'pos',        'pos',                                 'Part-of-Speech'          );
+          createAnnotationDiv('pos',      'pos',        'pos',                                 '詞性分析'          );
 //          createAnnotationDiv('lemma',    'lemma',      'lemma',                               'Lemmas'                  );
 //          createAnnotationDiv('ner',      'ner',        'ner',                                 'Named Entity Recognition');
 //          createAnnotationDiv('parse',    'parse',      'parseTree',                           'Constituency Parse'      );
-          createAnnotationDiv('deps',     'depparse',   'basicDependencies',                   'Basic Dependencies'      );
-          createAnnotationDiv('deps2',    'depparse',   'enhancedPlusPlusDependencies',        'Enhanced++ Dependencies' );
+          createAnnotationDiv('deps',     'depparse',   'basicDependencies',                   '相關分析'      );
+//          createAnnotationDiv('deps2',    'depparse',   'enhancedPlusPlusDependencies',        'Enhanced++ Dependencies' );
 //          createAnnotationDiv('openie',   'openie',     'openie',                              'Open IE'                 );
 //          createAnnotationDiv('coref',    'coref',      'corefs',                              'Coreference'             );
 //          createAnnotationDiv('entities', 'entitylink', 'entitylink',                          'Wikidict Entities'       );
